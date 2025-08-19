@@ -1,0 +1,25 @@
+{
+  "ipfs": [
+    {
+      "title": "Voting Stage-1`",
+      "description": "testing governance stage - 1",
+      "shortDescription": "testing governance stage - 1...",
+      "discussions": "",
+      "author": "0x108bD6239eD7A331D553838BD62b4d4009Ae24A0",
+      "aip": 0,
+      "ipfsHash": "bafkreifrf6l4uijslvrzgxpoplym3gmx2pc4zb2mngl3io2qpdaysk57b4",
+      "choices": [
+        "For",
+        "Against",
+        "Abstain"
+      ],
+      "start": 1754461891,
+      "end": 1754465491,
+      "snapshot": 29346497,
+      "space": "helix.eth",
+      "type": "basic",
+      "originalHash": "0xb12f97ca21325d63935dee7af0cd9997d3c5cc874c6997b43b5078c1892bbf0f",
+      "id": 0
+    }
+  ]
+}
