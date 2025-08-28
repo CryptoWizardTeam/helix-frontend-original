@@ -96,7 +96,7 @@ export const StakingPanel: React.FC<StakingPanelProps> = ({
   icon,
   stakeData,
   stakeUserData,
-  ethPriceUsd,
+  // ethPriceUsd,
   maxSlash,
   hasDiscountProgram,
 }) => {

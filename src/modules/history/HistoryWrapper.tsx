@@ -224,9 +224,9 @@ export const HistoryWrapper = () => {
       ) : !isEmpty ? (
         Object.entries(groupByDate(filteredTxns)).map(([date, txns], groupIndex) => (
           <React.Fragment key={groupIndex}>
-            {/* <Typography variant="h4" color="text.primary" sx={{ ml: 9, mt: 6, mb: 2 }}>
+            <Typography variant="h4" color="text.primary" sx={{ ml: 9, mt: 6, mb: 2 }}>
               {date}
-            </Typography> */}
+            </Typography>
             {txns.map((transaction: TransactionHistoryItemUnion, index: number) => {
               const isLastItem = index === txns.length - 1;
               return (
