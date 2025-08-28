@@ -79,20 +79,20 @@ export default function Staking() {
   // Total funds at Safety Module (stkaave tvl + stkbpt tvl)
   const tvl = formatUnits(
     BigNumber.from(stakeGeneralResult?.aave.stakeTokenTotalSupply || '0')
-      .mul(stakeGeneralResult?.aave.stakeTokenPriceEth || '0')
-      .add(
-        BigNumber.from(stakeGeneralResult?.bpt.stakeTokenTotalSupply || '0').mul(
-          stakeGeneralResult?.bpt.stakeTokenPriceEth || '0'
-        )
-      )
-      .mul(stakeGeneralResult?.ethPriceUsd || 1),
-    18 + 18 + 8 // 2x total supply (18 decimals), 1x ethPriceUSD (8 decimals)
+      .mul(stakeGeneralResult?.aave.stakeTokenPriceEth || '0'),
+      // .add(
+      //   BigNumber.from(stakeGeneralResult?.bpt.stakeTokenTotalSupply || '0').mul(
+      //     stakeGeneralResult?.bpt.stakeTokenPriceEth || '0'
+      //   )
+      // )
+      // .mul(stakeGeneralResult?.ethPriceUsd || 1),
+    18 + 8 // 2x total supply (18 decimals), 1x ethPriceUSD (8 decimals)
   );
 
   // Total AAVE Emissions (stkaave dps + stkbpt dps)
   const stkEmission = formatEther(
     BigNumber.from(stakeGeneralResult?.aave.distributionPerSecond || '0')
-      .add(stakeGeneralResult?.bpt.distributionPerSecond || '0')
+      // .add(stakeGeneralResult?.bpt.distributionPerSecond || '0')
       .mul('86400')
   );
 

@@ -129,16 +129,16 @@ export const StakingPanel: React.FC<StakingPanelProps> = ({
 
   const stakedUSD = formatUnits(
     BigNumber.from(stakeUserData?.stakeTokenRedeemableAmount || '0')
-      .mul(stakeData?.stakeTokenPriceEth || '0')
-      .mul(ethPriceUsd || '1'),
-    18 + 18 + 8 // userBalance (18), stakedTokenPriceEth (18), ethPriceUsd (8)
+      .mul(stakeData?.stakeTokenPriceEth || '0'),
+      // .mul(ethPriceUsd || '1'),
+    18 + 8 // userBalance (18), stakedTokenPriceEth (18), ethPriceUsd (8)
   );
 
   const claimableUSD = formatUnits(
     BigNumber.from(stakeUserData?.userIncentivesToClaim || '0')
-      .mul(stakeData?.rewardTokenPriceEth || '0')
-      .mul(ethPriceUsd || '1'),
-    18 + 18 + 8 // incentivesBalance (18), rewardTokenPriceEth (18), ethPriceUsd (8)
+      .mul(stakeData?.rewardTokenPriceEth || '0'),
+      // .mul(ethPriceUsd || '1'),
+    18 + 8 // incentivesBalance (18), rewardTokenPriceEth (18), ethPriceUsd (8)
   );
 
   const aavePerMonth = formatEther(
